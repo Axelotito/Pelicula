@@ -89,10 +89,10 @@ public class Pelicula {
 
 }
 
-class Serie extends Pelicula{
+class Serie extends Pelicula {
 
-    public int noTemporadas;
-    
+    private int noTemporadas;
+
     public Serie() {
         super(); // accede al constructor de la clase Pelicula
         noTemporadas = 1;
@@ -101,5 +101,73 @@ class Serie extends Pelicula{
     public Serie(String titulo, String creador) {
         super(titulo, creador);
         noTemporadas = 1;
+    }
+
+    public Serie(String titulo, String genero, String creador, int year, int duracion, int noTemporadas) {
+        super(titulo, genero, creador, year, duracion);
+        this.noTemporadas = noTemporadas;
+    }
+
+    public String toString() {
+        return super.toString();
+    }
+
+    // Getters and Setters
+    public int getNoTemporadas() {
+        return noTemporadas;
+    }
+
+    public void setNoTemporadas(int noTemporadas) {
+        this.noTemporadas = noTemporadas;
+    }
+
+    @Override
+    public String getTitulo() {
+        return super.getTitulo();
+    }
+
+    @Override
+    public void setTitulo(String titulo) {
+        super.setTitulo(titulo);
+    }
+
+    @Override
+    public String getGenero() {
+        return super.getGenero();
+    }
+
+    @Override
+    public void setGenero(String genero) {
+        super.setGenero(genero);
+    }
+
+    @Override
+    public String getCreador() {
+        return super.getCreador();
+    }
+
+    @Override
+    public void setCreador(String creador) {
+        super.setCreador(creador);
+    }
+
+    @Override
+    public int getYear() {
+        return super.getYear();
+    }
+
+    @Override
+    public void setYear(int year) {
+        super.setYear(year);
+    }
+
+    @Override
+    public int getDuracion() {
+        return super.getDuracion();
+    }
+
+    @Override
+    public void setDuracion(int duracion) {
+        super.setDuracion(duracion);
     }
 }
