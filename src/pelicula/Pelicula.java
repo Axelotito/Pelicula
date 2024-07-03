@@ -4,6 +4,7 @@ package pelicula;
  *
  * @author axeli
  */
+
 public class Pelicula implements Visualizable{
 
     private String titulo, genero, creador;
@@ -120,14 +121,14 @@ public class Pelicula implements Visualizable{
             series[i].marcarVisto(); // nada mas marcara como visto las primeras 3 series
         }
 
-        System.out.println("Películas visualizadas:");
+        System.out.println("-------Películas visualizadas:");
         for (Pelicula pelicula : peliculas) {
             if (pelicula.esVisto()) {
                 System.out.println("- " + pelicula.toString());
             }
         }
 
-        System.out.println("\nSeries visualizadas:");
+        System.out.println("\n-------Series visualizadas:");
         for (Serie serie : series) {
             if (serie.esVisto()) {
                 System.out.println("- " + serie.toString());
@@ -150,10 +151,10 @@ public class Pelicula implements Visualizable{
             }
         }
 
-        System.out.println("\nSerie con más temporadas:");
+        System.out.println("\n-------Serie con más temporadas:");
         System.out.println(serieMasTemporadas.toString());
 
-        System.out.println("\nPelícula del año más reciente:");
+        System.out.println("\n-------Película del año más reciente:");
         System.out.println(peliculaMasReciente.toString());
     }
 }
