@@ -3,6 +3,15 @@ package pelicula;
 /**
  *
  * @author axeli
+*/
+
+/**
+ * Este programa representa una aplicación de visualización de películas y series.
+ * La clase Pelicula implementa la interfaz Visualizable y representa una película con sus atributos como título, género, creador, año y duración.
+ * La clase Serie extiende la clase Pelicula y agrega el atributo noTemporadas para representar el número de temporadas de una serie.
+ * La interfaz Visualizable define los métodos marcarVisto(), esVisto() y tiempoVisto() que deben ser implementados por las clases que la implementen.
+ * El programa crea un arreglo de películas y un arreglo de series, y luego marca como vistas las primeras 3 películas y series.
+ * Luego, muestra las películas y series visualizadas, y encuentra la serie con más temporadas y la película más reciente.
  */
 
 public class Pelicula implements Visualizable{
