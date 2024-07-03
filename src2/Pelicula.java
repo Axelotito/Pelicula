@@ -1,22 +1,10 @@
-
 import java.util.ArrayList;
 
 /**
  *
  * @author axeli
  */
-/**
- * Este programa representa una aplicación de visualización de películas y
- * series. La clase Pelicula implementa la interfaz Visualizable y representa
- * una película con atributos como título, género, creador, año y duración. La
- * clase Serie extiende la clase Pelicula y agrega el atributo noTemporadas para
- * representar el número de temporadas de una serie. La interfaz Visualizable
- * define los métodos marcarVisto(), esVisto() y tiempoVisto() que deben ser
- * implementados por las clases que la implementan. El programa crea un arreglo
- * de películas y un arreglo de series, y luego marca las primeras 3 películas y
- * series como vistas. Luego muestra las películas y series vistas, y encuentra
- * la serie con más temporadas y la película más reciente.
- */
+
 public class Pelicula implements Visualizable {
 
     private String titulo, genero, creador;
