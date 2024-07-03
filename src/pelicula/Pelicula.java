@@ -79,8 +79,7 @@ public class Pelicula implements Visualizable{
     }
 
     public String toString() {
-
-        return ""; //modificar
+        return "Título: " + titulo + "\nGénero: " + genero + "\nCreador: " + creador + "\nAño: " + year + "\nDuración: " + duracion + " minutos";
     }
 
     @Override
@@ -117,16 +116,49 @@ public class Pelicula implements Visualizable{
 
         for (int i = 0 ; i < 3 ; i++)
         {
-            peliculas[i].marcarVisto();
-
+            peliculas[i].marcarVisto(); // nada mas marcara como visto las primeras 3 peliculas
+            series[i].marcarVisto(); // nada mas marcara como visto las primeras 3 series
         }
+
+        System.out.println("Películas visualizadas:");
+        for (Pelicula pelicula : peliculas) {
+            if (pelicula.esVisto()) {
+                System.out.println("- " + pelicula.toString());
+            }
+        }
+
+        System.out.println("\nSeries visualizadas:");
+        for (Serie serie : series) {
+            if (serie.esVisto()) {
+                System.out.println("- " + serie.toString());
+            }
+        }
+
+        // buscar la serie con mas temporadas
+        Serie serieMasTemporadas = series[0];
+        for (int i = 1; i < series.length; i++) {
+            if (series[i].getNoTemporadas() > serieMasTemporadas.getNoTemporadas()) {
+                serieMasTemporadas = series[i];
+            }
+        }
+
+        // buscar la pelicula mas reciente
+        Pelicula peliculaMasReciente = peliculas[0];
+        for (int i = 1; i < peliculas.length; i++) {
+            if (peliculas[i].getYear() > peliculaMasReciente.getYear()) {
+                peliculaMasReciente = peliculas[i];
+            }
+        }
+
+        System.out.println("\nSerie con más temporadas:");
+        System.out.println(serieMasTemporadas.toString());
+
+        System.out.println("\nPelícula del año más reciente:");
+        System.out.println(peliculaMasReciente.toString());
     }
-
-    
-
 }
 
-class Serie extends Pelicula implements Visualizable{
+class Serie extends Pelicula {
 
     private int noTemporadas;
 
