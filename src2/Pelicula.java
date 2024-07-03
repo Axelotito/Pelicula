@@ -147,9 +147,9 @@ public class Pelicula implements Visualizable{
         System.out.println("-------Series visualizadas:");
         for (Serie serie : series) {
             if (serie.esVisto()) {
-            System.out.println("- " + serie.toString() + " (Vista)");
+            System.out.println("- " + serie.toString() + " (Vista)" +  " \nTemporadas: " + serie.getNoTemporadas() );
             } else {
-            System.out.println("- " + serie.toString() + " (No vista)");
+            System.out.println("- " + serie.toString() + " (No vista)" + " \nTemporadas: " + serie.getNoTemporadas());
             }
             System.out.println();
         }
@@ -171,7 +171,7 @@ public class Pelicula implements Visualizable{
         }
 
         System.out.println("\n-------Serie con más temporadas:");
-        System.out.println(serieMasTemporadas.toString());
+        System.out.println(serieMasTemporadas.toString() + " \nTemporadas: " + serieMasTemporadas.getNoTemporadas() );
 
         System.out.println("\n-------Película del año más reciente:");
         System.out.println(peliculaMasReciente.toString());
