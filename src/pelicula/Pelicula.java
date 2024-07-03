@@ -6,15 +6,16 @@ package pelicula;
  */
 public class Pelicula {
 
-    private String titulo, genero, creador, year, duracion;
+    private String titulo, genero, creador;
     private boolean visto;
+    private int year, duracion;
 
     public Pelicula() {
         this.titulo = "default";
         this.creador = "default";
         this.genero = "default";
-        this.year = "default";
-        this.duracion = "default";
+        this.year = 0;
+        this.duracion = 0;
         this.visto = false;
     }
 
@@ -22,12 +23,12 @@ public class Pelicula {
         this.titulo = titulo;
         this.creador = creador;
         genero = "default";
-        year = "default";
-        duracion = "default";
+        year = 0;
+        duracion = 0;
         visto = false;
     }
 
-    public Pelicula(String titulo, String genero, String creador, String year, String duracion) {
+    public Pelicula(String titulo, String genero, String creador, int year, int duracion) {
         this.titulo = titulo;
         this.genero = genero;
         this.creador = creador;
@@ -61,23 +62,23 @@ public class Pelicula {
         this.creador = creador;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
-    public String getDuracion() {
+    public int getDuracion() {
         return duracion;
     }
 
-    public void setDuracion(String duracion) {
+    public void setDuracion(int duracion) {
         this.duracion = duracion;
     }
 
-    public String toString(){
+    public String toString() {
 
         return ""; //modificar
     }
@@ -86,4 +87,19 @@ public class Pelicula {
         // TODO code application logic here
     }
 
+}
+
+class Serie extends Pelicula{
+
+    public int noTemporadas;
+    
+    public Serie() {
+        super(); // accede al constructor de la clase Pelicula
+        noTemporadas = 1;
+    }
+
+    public Serie(String titulo, String creador) {
+        super(titulo, creador);
+        noTemporadas = 1;
+    }
 }
