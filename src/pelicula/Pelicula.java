@@ -129,19 +129,26 @@ public class Pelicula implements Visualizable{
             peliculas[i].marcarVisto(); // nada mas marcara como visto las primeras 3 peliculas
             series[i].marcarVisto(); // nada mas marcara como visto las primeras 3 series
         }
-
         System.out.println("-------Películas visualizadas:");
         for (Pelicula pelicula : peliculas) {
             if (pelicula.esVisto()) {
-                System.out.println("- " + pelicula.toString());
+            System.out.println("- " + pelicula.toString() + " (Vista)");
+            } else {
+            System.out.println("- " + pelicula.toString() + " (No vista)");
             }
+            System.out.println();
         }
 
-        System.out.println("\n-------Series visualizadas:");
+        System.out.println();
+
+        System.out.println("-------Series visualizadas:");
         for (Serie serie : series) {
             if (serie.esVisto()) {
-                System.out.println("- " + serie.toString());
+            System.out.println("- " + serie.toString() + " (Vista)");
+            } else {
+            System.out.println("- " + serie.toString() + " (No vista)");
             }
+            System.out.println();
         }
 
         // buscar la serie con mas temporadas
